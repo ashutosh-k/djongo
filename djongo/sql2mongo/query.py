@@ -688,6 +688,7 @@ class AlterQuery(VoidQuery):
         )
 
     def _index(self):
+        self._iden_name = self._iden_name[-15:]
         self.db_ref[self.left_table].create_index(
             self.field_dir,
             name=self._iden_name)
