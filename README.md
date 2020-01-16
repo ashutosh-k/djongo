@@ -84,3 +84,7 @@ djongo is a SQL to mongodb query compiler. It translates a SQL query string into
  * Issues, where things are not working as expected, please raise a git-hub issue ticket. 
  * For questions and clarifications regarding usage, please put it up on stackoverflow instead. 
    
+
+## Added changes for documentDB
+
+added self._iden_name = self._iden_name[-15:] at line 696 in sql2mongo/query.py [in _unique() function]
