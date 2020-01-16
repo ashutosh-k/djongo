@@ -693,6 +693,7 @@ class AlterQuery(VoidQuery):
             name=self._iden_name)
 
     def _unique(self):
+        self._iden_name = self._iden_name[-15:]
         self.db_ref[self.left_table].create_index(
             self.field_dir,
             unique=True,
